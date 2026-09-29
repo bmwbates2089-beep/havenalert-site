@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["WU7WUKUA3Q.com.benny.haven"],
+        "components": [
+          {
+            "/": "/connect",
+            "comment": "Exact path only"
+          }
+        ]
+      }
+    ]
+  }
+}

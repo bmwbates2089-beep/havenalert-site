@@ -4,7 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Haven - A Discreet Layer of Protection</title>
-<meta name="description" content="Haven is a personal safety app that lets you silently alert a trusted contact in an emergency, including from the lock screen. Award-winning. Built in the Cayman Islands.">
+<meta name="description" content="Haven is a personal safety app, in pilot development, that lets you quietly alert someone you trust when you feel unsafe. Built in the Cayman Islands.">
+<link rel="canonical" href="https://havenalert.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Haven">
+<meta property="og:title" content="Haven: a discreet layer of protection">
+<meta property="og:description" content="A discreet way to reach someone you trust. Haven is in pilot development and is seeking institutional partners.">
+<meta property="og:url" content="https://havenalert.com/">
+<meta property="og:image" content="https://havenalert.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://havenalert.com/og-image.jpg">
 <link rel="icon" type="image/png" href="icon.png">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -72,7 +83,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('hero-bg.jpg') center center / cover no-repeat;
+  background: url('hero-bg-1600.jpg') center center / cover no-repeat;
   z-index: 0;
 }
 .hero-overlay {
@@ -90,7 +101,7 @@ body {
   content: '';
   position: absolute; bottom: 0; left: 0; right: 0;
   height: 80px;
-  background: linear-gradient(to bottom, transparent, var(--off-white));
+  background: linear-gradient(to bottom, transparent, var(--navy));
   z-index: 3;
 }
 .hero-inner {
@@ -158,6 +169,8 @@ body {
 }
 .phone-mockup img {
   width: 100%;
+  height: auto;
+  aspect-ratio: auto;
   border-radius: 24px;
   display: block;
 }
@@ -314,10 +327,34 @@ section { padding: 80px 2rem; }
 }
 .footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
 
+/* HERO ACTIONS */
+.hero-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.hero-btn {
+  display: inline-block; background: var(--white); color: var(--navy);
+  padding: 11px 22px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none;
+}
+.hero-btn:hover { opacity: 0.9; }
+.hero-note { font-size: 0.85rem; color: rgba(255,255,255,0.72); margin-top: 1.25rem; max-width: 520px; }
+.step-note { margin-top: 1.5rem; font-size: 0.92rem; color: var(--text-muted); max-width: 720px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; }
+
+/* FAQ */
+.faq { background: var(--white); }
+.faq-list { max-width: 760px; }
+.faq details { background: var(--off-white); border: 1px solid rgba(14,23,71,0.06); border-radius: 12px; margin-bottom: 0.75rem; }
+.faq summary { cursor: pointer; padding: 1rem 1.25rem; font-weight: 600; color: var(--navy); }
+.faq details p { padding: 0 1.25rem 1.1rem; font-size: 0.95rem; color: var(--text-muted); }
+
+.approach-title { margin-top: 3.5rem; margin-bottom: 1.75rem; }
+
 /* MOBILE */
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .hero { padding: 120px 1.5rem 80px; }
+  .nav { padding: 0 1rem; }
+  .award-banner { padding: 80px 1.25rem 1.5rem; }
+  .hero-actions { justify-content: center; }
+  .hero-note { margin-left: auto; margin-right: auto; }
+  .hero { padding: 48px 1.25rem 64px; }
   .hero-inner {
     flex-direction: column;
     text-align: center;
@@ -346,10 +383,11 @@ section { padding: 80px 2rem; }
   </a>
   <div class="nav-links">
     <a href="#how-it-works">How it works</a>
-    <a href="#institutions">For institutions</a>
+    <a href="#institutions">For organisations</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </div>
-  <a href="#contact" class="nav-cta">Get in touch</a>
+  <a href="mailto:hello@havenalert.com?subject=Discussing%20a%20Haven%20pilot" class="nav-cta">Discuss a pilot</a>
 </nav>
 
 <!-- AWARD BANNER -->
@@ -359,7 +397,7 @@ section { padding: 80px 2rem; }
       <svg viewBox="0 0 24 24"><path d="M12 2L8.5 8.5 2 9.5l4.5 4.5L5.5 21 12 17.5 18.5 21l-1-7 4.5-4.5-6.5-1z"/></svg>
     </div>
     <div class="award-banner-text">
-      <h3>Community Impact Award Winner, BDC 2026</h3>
+      <h3>Community Impact Award Winner, 2026 Business Design Competition</h3>
       <p>Recognised at the Cayman Islands Business Design Competition for its potential to support individuals across the community.</p>
     </div>
   </div>
@@ -370,38 +408,28 @@ section { padding: 80px 2rem; }
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-text">
-      <h1>Haven</h1>
+      <h1>A discreet way to reach someone you trust.</h1>
       <p class="hero-tagline">A discreet layer of protection</p>
       <p class="hero-desc">
-        Haven is a personal safety app that lets you silently alert a trusted contact in an emergency, including from your lock screen via Siri, without unlocking your phone. One voice command is all it takes.
+        Haven is a personal safety app that lets you quietly alert a trusted contact when you feel unsafe. Haven is in pilot development, and we are seeking institutional partners to help us evaluate it.
       </p>
       <div class="hero-badges">
         <span class="badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          Available on iOS
+          In pilot development
         </span>
-        <span class="badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          Works from lock screen
-        </span>
-        <span class="badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          No unlock needed
-        </span>
+      </div>
+      <p class="hero-note">Your chosen trusted contact receives the alert. Haven does not monitor alerts or provide an emergency response. In immediate danger, call your local emergency number.</p>
+      <div class="hero-actions" style="margin-top:1.25rem">
+        <a class="hero-btn" href="mailto:hello@havenalert.com?subject=Discussing%20a%20Haven%20pilot">Discuss a pilot</a>
       </div>
     </div>
     <div class="hero-phones">
       <div>
         <div class="phone-mockup">
-          <img src="phone-home.png" alt="Haven home screen showing the Activate Haven button and trusted contacts">
+          <img src="phone-home-600.jpg" alt="An earlier design of the Haven home screen, with the Activate Haven button and trusted contacts" width="390" height="844" loading="eager">
         </div>
-        <p class="phone-label">Activate in one tap</p>
-      </div>
-      <div>
-        <div class="phone-mockup phone-alert">
-          <img src="phone-alert.png" alt="Haven alert received screen showing location and emergency options">
-        </div>
-        <p class="phone-label">Your contact is alerted</p>
+        <p class="phone-label">Earlier design shown</p>
       </div>
     </div>
   </div>
@@ -423,13 +451,39 @@ section { padding: 80px 2rem; }
       </div>
       <div class="step">
         <div class="step-number">2</div>
-        <h3>Say the word</h3>
-        <p>Use a single Siri voice command from your lock screen. No need to unlock your phone or open the app.</p>
+        <h3>Connect and test together</h3>
+        <p>Your trusted contact accepts your invitation, and you test Haven together so you both know what to expect.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
         <h3>Your contact is alerted</h3>
-        <p>Your trusted contact receives an instant notification with your GPS location. Silently. Discreetly.</p>
+        <p>When you feel unsafe, Haven quietly sends your trusted contact an alert, with your location when it is available.</p>
+      </div>
+    </div>
+    <p class="step-note">Alerts depend on an internet connection, permissions, device settings and your contact being available. Haven cannot guarantee delivery or a response. Activation from a locked iPhone is still being tested.</p>
+
+    <h2 class="section-title approach-title">A different approach to personal safety</h2>
+    <div class="inst-grid">
+      <div class="inst-card">
+        <div class="inst-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Someone you trust</h3>
+        <p>Haven is built around one person who knows you, chosen by you in advance.</p>
+      </div>
+      <div class="inst-card">
+        <div class="inst-card-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Privacy by design</h3>
+        <p>Your alert can include your location when it is available, and Haven is not designed to track where you go.</p>
+      </div>
+      <div class="inst-card">
+        <div class="inst-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>A discreet way to ask for help</h3>
+        <p>Designed for moments when making a call may feel difficult, so you can still let your trusted contact know you need them.</p>
       </div>
     </div>
   </div>
@@ -438,31 +492,65 @@ section { padding: 80px 2rem; }
 <!-- INSTITUTIONS -->
 <section class="institutions" id="institutions">
   <div class="section-inner">
-    <p class="section-label">For institutions</p>
-    <h2 class="section-title">A duty-of-care solution for schools, care homes, and organisations</h2>
-    <p class="section-subtitle">Haven is preparing for small, controlled institutional pilots in the Cayman Islands.</p>
+    <p class="section-label">For organisations</p>
+    <h2 class="section-title">A discreet layer of protection for the people you support.</h2>
+    <p class="section-subtitle">We’re looking for organisations interested in helping us evaluate Haven through small, carefully scoped pilots. Each pilot is subject to readiness checks, and organisations taking part do not receive participants’ alerts or locations.</p>
     <div class="inst-grid">
       <div class="inst-card">
         <div class="inst-card-icon">
           <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
         </div>
-        <h3>Schools</h3>
-        <p>Recommend Haven to parents as a safety tool students can use outside of school hours. A discreet way for young people to reach home when they need to.</p>
+        <h3>Colleges and universities</h3>
+        <p>Give students and staff a discreet way to reach someone they trust, on campus and beyond.</p>
       </div>
       <div class="inst-card">
         <div class="inst-card-icon">
-          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M4.93 4.93l4.24 4.24M14.83 14.83l4.24 4.24M14.83 9.17l4.24-4.24M4.93 19.07l4.24-4.24"/></svg>
         </div>
-        <h3>Care providers</h3>
-        <p>Provide residents and staff with a simple emergency tool that works without drawing attention. Suitable for vulnerable adults and supported living environments.</p>
+        <h3>Crisis centres and support services</h3>
+        <p>An additional way for those you work with to reach someone they trust, alongside the services you already provide.</p>
       </div>
       <div class="inst-card">
         <div class="inst-card-icon">
           <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
-        <h3>Organisations</h3>
-        <p>Offer Haven as part of your employee safety or community support initiatives. A practical, low-cost addition to your duty-of-care framework.</p>
+        <h3>Workplaces and community organisations</h3>
+        <p>Support the personal safety of employees and community members with a discreet way to reach a trusted contact.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-title">Common questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Can I download Haven now?</summary>
+        <p>Not yet. Haven is in pilot development and is being tested on iPhone with a small number of invited testers. It is not on the App Store.</p>
+      </details>
+      <details>
+        <summary>Who can take part in a pilot?</summary>
+        <p>Current pilots are open to people aged 18 and over at participating organisations.</p>
+      </details>
+      <details>
+        <summary>How is a trusted contact set up?</summary>
+        <p>You invite one person you trust. Once they accept, you test Haven together so you both know what an alert looks like.</p>
+      </details>
+      <details>
+        <summary>Does Haven need an internet connection?</summary>
+        <p>Yes. Alerts need a connection on both phones. If a phone is offline, switched off or has notifications turned off, an alert may be delayed or may not arrive.</p>
+      </details>
+      <details>
+        <summary>Does Haven contact emergency services?</summary>
+        <p>No. Haven does not monitor alerts or provide an emergency response, and it does not guarantee a response. If you are in immediate danger, call your local emergency number (911 in the Cayman Islands).</p>
+      </details>
+      <details>
+        <summary>Is Haven available on Android?</summary>
+        <p>Not at present. The current pilot is for iPhone.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -472,13 +560,13 @@ section { padding: 80px 2rem; }
   <div class="section-inner">
     <p class="section-label">Get in touch</p>
     <h2 class="section-title">Interested in Haven?</h2>
-    <p class="section-subtitle" style="margin: 0 auto 2rem;">Whether you are an individual, a parent, or an institution exploring a pilot partnership, we would love to hear from you.</p>
-    <a href="mailto:hello@havenalert.com" class="contact-email">
+    <p class="section-subtitle" style="margin: 0 auto 2rem;">Whether you are an institution exploring a pilot partnership or an individual with a question, we would love to hear from you.</p>
+    <a href="mailto:hello@havenalert.com?subject=Discussing%20a%20Haven%20pilot" class="contact-email">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
       hello@havenalert.com
     </a>
     <p class="contact-note">
-      Haven is currently available on iOS, with Android support in active development. We are based in the Cayman Islands and welcome enquiries from individuals and organisations locally and internationally.
+      Haven is in pilot development on iPhone. We are based in the Cayman Islands and welcome enquiries from individuals and organisations locally and internationally.
     </p>
   </div>
 </section>
